@@ -1,0 +1,63 @@
+<div class="col-lg-3">
+</div>
+	<div class="col-lg-6">
+
+		<div class="panel panel-default panel_white">
+				<div class="panel-heading">
+						<h2 class="panel-title text-center" >New Concert</h2>
+				</div>
+				<div class="panel-body">
+				<div class="container-fluid">
+
+					<%= form_for(@concert) do |f| %>
+
+					<div class="input-group">
+						<%= f.label :city, class: "form-label" %>
+						<%= f.text_field :city, class: "form-control"%>
+					</div>
+
+					<div class="input-group">
+						<%= f.label :artist, class: "form-label" %>
+						<%= f.text_field :artist, class: "form-control" %>
+					</div>
+					
+					<div class="input-group">
+						<%= f.label :date, class: "form-label" %>
+						<%= f.date_field :date, class: "form-control" %>
+					</div>
+
+					<div class="input-group">
+						<%= f.label :venue, class: "form-label" %>
+						<%= f.text_field :venue, class: "form-control" %>
+					</div>
+					
+					<div class="input-group">
+						<%= f.label :description, class: "form-label" %>
+						<%= f.text_field :description, class: "form-control" %>
+					</div>
+					
+					<div class="input-group">
+						<%= f.label :Ticket_price, class: "form-label" %>
+						<%= f.number_field :ticket_price, class: "form-control" %>
+					</div>
+					
+						 <div class="checkbox">
+						    <label>
+						      <input type="checkbox"> All info is correct?
+						    </label>
+						  </div>
+						<button class="btn btn-default" type="submit">Submit</button>
+					<% end %>
+
+				
+				</div>
+				</div>
+				
+
+
+		</div>
+	</div>
+<div class="col-lg-3">
+			
+</div>
+	

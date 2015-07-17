@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ConcertSite</title>
+  
+  <%= javascript_tag "window._token = '#{form_authenticity_token}'" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render './partials/header' %>
+<div class="container-fluid" style="background-color: transparent;">
+
+  
+
+						<%= yield %>
+
+			
+</div>
+
+<%= render './partials/footer'%>
+</body>
+</html>

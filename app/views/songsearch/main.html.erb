@@ -1,0 +1,100 @@
+
+<div class="col-lg-1">
+
+</div>
+	<div class="col-lg-7">
+					
+		<div class="panel panel-default">
+
+			<div class="panel-body" style="padding: 0px;">
+				<div class="container-fluid">
+					<h1 class="jumbotron" style="border-radius:20px; padding: 20px">Search Track<br><small>Previews</small></h1>
+					
+						<div class="col-md-6">
+							
+								<div class="input-group  has-validation">
+									<input class="form-control has-success" name = "search">
+									<span class="input-group-btn">
+									<button type="submit" class="btn btn-default" onClick="onSearchSubmit()" >Search</button>
+									</span>
+								</div>
+
+						</div>
+						<div class="col-md-6">
+							<div class="widget">
+								<div class="cover">
+								<img src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43" class="js-player-image">
+								</div>
+								<div class="heading">
+								<!-- Try adding/removing these classes: -->
+								<!-- disabled -->
+								<!-- playing -->
+								<div class="btn-play" onclick="onPlayButtonClick()"></div>
+
+								<div class="metadata">
+								  <p class="title">Hunger of The Pine</p>
+								  <a class="over-hover"href="#" onclick="$('#artistModal').modal()"><p class="author">alt-J</p></a>
+
+								  <div class="seekbar">
+								    <progress value="0" max="30"></progress>
+								  </div>
+								</div>
+								</div>
+								
+
+								<audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31" class="js-player" ontimeupdate='updateTrackTime()'></audio>
+							</div>
+							
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4">
+		
+	</div>
+
+	<div class="modal fade" id="artistModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="artistModalLabel">Please search for a new artist</h4>
+	      </div>
+	      <div class="modal-body">
+			<div class="container-fluid">
+				<div class="col-xs-6">
+					<img id='image' src='' width="250px">
+				</div>
+				<div class="col-xs-6">
+					<div class="container-fluid">
+						<div class="row" id="genre">	
+						</div>
+						<div class="row">
+							<h5>Followers on Spotify:</h5>
+							<span id="followers">Search First</span>
+						</div>
+						<div class="row">
+							<h5>Popularity:</h5>
+							<span id="pop">Search First</span>
+						</div>	
+					</div>
+				</div>
+			</div>
+			
+
+	        	<!-- 
+				 
+				$('#pop').val(artist.popularity); 
+				
+ -->
+	      </div>
+	    
+	    </div>
+	  </div>
+	</div>
+
+
+
+

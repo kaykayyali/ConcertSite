@@ -1,0 +1,48 @@
+<div class="col-lg-3">
+	<div class="panel panel-default">
+			<div class="panel-heading">
+					<h2 class="panel-title text-center" >Concerts this month</h2>
+			</div>
+			<div class="panel-body">
+
+				<ul>
+
+					<% @concerts_month.each do |concert| %>
+						<li>
+							<a href="<%= concert_path(concert.id)%>" style = "font-size: 20px"><%= concert.artist %></a>  <p><%= pretty_date(concert.date) %></p>
+						</li>
+
+
+					<%end%>
+				</ul>
+			</div>
+	</div>
+			
+</div>
+	<div class="col-lg-8">
+					
+			<div class="panel panel-default">
+
+			<div class="panel-heading">
+			<h1 class="panel-title text-center" >Concerts today</h1>
+			</div>
+			<div class="panel-body">
+			<div class="container-fluid">
+			<ul>
+				<% @concerts_today.each do |concert| %>
+				<div class="col-xs-6">
+					<a href="<%= concert_path(concert.id)%>"> <h3><%= concert.artist %></a>  <small><%= concert.city %></small></h3></a>
+				</div>
+				<%end%>	
+			</ul>
+			
+			</div>
+			</div>
+			
+
+
+	</div>
+</div>
+<div class="col-lg-1">
+			
+</div>
