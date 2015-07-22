@@ -71,7 +71,7 @@
 									authenticity_token: window._token
 								}
 								console.log(jsonpack)
-							$.post('http://localhost:3000/addcomments/'+'<%= @artist.id %>', jsonpack)
+							$.post('/addcomments/'+'<%= @artist.id %>', jsonpack)
 							$('.titleInput').prop('value', '');
 							$('.descriptionInput').prop('value', '');
 							$('.commentForm').slideToggle();
@@ -106,7 +106,7 @@
 			<script>
 
 				function getComments() {
-					var url = 'http://localhost:3000/getcomments/' + "<%= @concert.id %>"
+					var url = '/getcomments/' + "<%= @concert.id %>"
 					console.log(url)
 
 					$.get(url, handleComments)
