@@ -5,13 +5,21 @@ Rails.application.routes.draw do
   resources :concerts do
     resources :comments
   end
+  get '/' => "concerts#home"
 
   get '/home' => "concerts#home"
   get '/upcoming' => "concerts#upcoming"
+  #API
   get '/getcomments/:id' => 'comments#send_comments'
   post '/addcomments/:id' => 'comments#add_comments'
+
   get '/songsearch' => 'songsearch#main'
-  get '/' => "concerts#home"
+  #authentication
+  get '/sign_up' => "users#new"
+  post '/users' => "users#create"
+  get '/login' => "sessions#new"
+  post '/login' => "sessions#create"
+  delete '/logout' => "sessions#destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

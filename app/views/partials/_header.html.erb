@@ -14,6 +14,22 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav pull-right">
+      <% if current_user.present? %>    
+            
+            <li><%=link_to "Logout", '/logout', :method => :delete %></li>  
+        <% else %>
+          <li> <%=link_to "Login", '/login'%></li>  
+        <% end%>
+      </ul>
+      <div class="nav navbar-brand pull-right">
+  <% if current_user.present? %>
+  Signed in as 
+      <%= current_user.username %>
+    <% end %>
+    
+
+    </div>
+      <ul class="nav navbar-nav pull-left">
         <li><a href="<%= home_path %>">Home</a></li>
         <li><a href="<%=upcoming_path%>">Upcoming Concerts</a></li>
         <li><a href="<%= concerts_path %>">All concerts</a></li>

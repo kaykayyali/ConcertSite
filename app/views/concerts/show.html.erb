@@ -31,17 +31,22 @@
 								
 								<%end%>
 								</ul>
-								<div class="panel panel-default panel_white_trans" style="padding: 10px;">	
+								<br>
+		<% if current_user.present? %>
+
+			<div class="panel panel-default panel_white_trans" style="padding: 10px;">	
+
 				<div class="panel-heading panel_trans text-center">
 
 					<h1 class="panel-title"><button class="btn btn-primary" id="commentHeading">Add Comment</button></h1>
 					
 				</div>	
-
+				
 				<div class="panel-body commentForm">
-				<script>
-					$('.commentForm').toggle()
-				</script>
+					<script>
+						$('.commentForm').toggle()
+					</script>
+					
 					<%= form_for([@concert, @comment]) do |f| %>
 
 					<div class="input-group">
@@ -81,8 +86,11 @@
 					</script>
 					
 				</div>
+				
 			</div>
+			<% end %>
 						</div>
+
 
 		</div>
 	</div>
