@@ -1,11 +1,11 @@
 <h1>Login</h1>
-<div class="form">
+<div class="form col-lg-3">
 	<%= form_tag '/login' do %> 
 		<div class="form-group">
-			Email: <%= text_field_tag :email, class: 'form-control' %>
+			Email: <%= text_field_tag :email, class: 'form-control white-text' %>
 		</div>
 		<div class="form-group">
-			Password <%= password_field_tag :password, class: 'form-control' %>
+			Password <%= password_field_tag :password, class: 'form-control white-text' %>
 		</div>
 		<%= submit_tag "Submit", class: 'btn btn-default' %>
 	<% end %>
