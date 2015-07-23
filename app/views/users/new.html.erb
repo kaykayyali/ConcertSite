@@ -1,4 +1,4 @@
-<h1>Sign up!</h1>
+<h1 class="jumbotron">Sign up!</h1>
 <div class="form col-lg-3 white-text">
 <%= form_for :user, url: '/users' do |f| %>
 	<div class = "form-group">	
@@ -14,7 +14,7 @@
   Password Confirmation :
   <%= f.password_field :password_confirmation, class: "form-control white-text" %>
   </div>
-  <%= f.submit "Submit" %>
+  <%= f.submit "Submit", class: 'btn btn-default' %>
 
 <% end %>
 </div>
